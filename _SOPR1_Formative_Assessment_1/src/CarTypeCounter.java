@@ -1,12 +1,18 @@
 import java.util.Scanner;
-public class Question_3 {
+public class CarTypeCounter {
+    public static int totLuxury = 0;
+    public static int totCommercial=0;
+    public static int totSedan =0;
 
     public static void main(String[] args) {
-        int totLuxury = 0;
-        int totCommercial=0;
-        int totSedan =0;
-        int type;
+        readCars();
+        System.out.println("Total luxury: "+totLuxury);
+        System.out.println("Total commercial: "+totCommercial);
+        System.out.println("Total sedan: "+totSedan);
+    }
 
+    public static void readCars(){
+        int type;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter car types (1: Luxury, 2: Commercial, 3: Sedan, 0:Exit):");
         type=scanner.nextInt();
@@ -22,9 +28,6 @@ public class Question_3 {
             }
             type=scanner.nextInt();
         }
-        System.out.println("Total luxury: "+totLuxury);
-        System.out.println("Total commercial: "+totCommercial);
-        System.out.println("Total sedan: "+totSedan);
 
     }
 }
